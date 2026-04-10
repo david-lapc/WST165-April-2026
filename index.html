@@ -5,12 +5,90 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poller+One&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        h1,
+        h2,
+        h3 {
+            margin: 1em 0;
+            text-align: center;
+            font-family: "Poller One", sans-serif;
+        }
+
+        body {
+            font-family: "Roboto Condensed", sans-serif;
+        }
+
+        header {
+            color: #fff;
+            padding: 20px;
+            background-color: rgb(33, 36, 48);
+        }
+
+        main {
+            min-height: calc(100vh - 300px);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            section.links {
+
+                ul {
+                    display: flex;
+                    list-style: none;
+                    justify-content: center;
+                    align-items: center;
+
+                    @media (max-width: 720px) {
+                        flex-direction: column;
+                    }
+
+                    li {
+                        a {
+                            display: block;
+                            padding: 10px 30px;
+                        }
+                    }
+                }
+            }
+        }
+
+        footer {
+            padding: 20px;
+            text-align: center;
+            background-color: rgb(33, 36, 48);
+            color: #fff;
+        }
+    </style>
 </head>
 
 <body>
-    <a href="website1/">Assignment 1</a>
-    <a href="website2/">Assignment 2</a>
-    <a href="website3/">Assignment 3</a>
+    <header>
+        <h1>WST 165 April 2026</h1>
+    </header>
+    <main>
+        <section class="links">
+            <ul>
+                <li><a href="website1/">Assignment 1</a></li>
+                <li><a href="website2/">Assignment 2</a></li>
+                <li><a href="website3/">Assignment 3</a></li>
+            </ul>
+        </section>
+    </main>
+    <footer>
+        <h2>
+            WST 165 April 2026
+        </h2>
+        <p>&copy; David LAPC</p>
+    </footer>
 </body>
 
 </html>
