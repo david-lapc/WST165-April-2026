@@ -1,0 +1,129 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.outer-grid-container {
+    display: grid;
+    grid-template-areas:
+        "header header header"
+        "nav main main"
+        "nav main main";
+
+    @media screen and (max-width: 850px) {
+        grid-template-areas:
+            "header header"
+            "nav nav"
+            "main main";
+    }
+
+    header {
+        grid-area: header;
+        background-color: black;
+        color: #fff;
+        text-align: center;
+        padding: 20px;
+    }
+
+    nav {
+        grid-area: nav;
+        background-color: rgb(7, 87, 0);
+        padding: 20px;
+
+        a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.2rem;
+            padding: 5px 0;
+            display: block;
+        }
+    }
+
+    main {
+        grid-area: main;
+        background-color: rgb(255, 208, 0);
+    }
+}
+
+.myGridContainer {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    padding: 20px;
+
+    @media screen and (max-width: 850px) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media screen and (max-width: 520px) {
+        grid-template-columns: 1fr;
+    }
+
+    a {
+        display: block;
+        min-width: 100px;
+        min-height: 100px;
+        background-size: 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+        transition: all 0.2s linear;
+
+        &:hover {
+            background-size: 110%;
+        }
+    }
+
+    .item1 {
+        background-image: url(../images/parrot1.jpg);
+        background-position: 0 15%;
+
+        @media screen and (min-width: 851px) {
+            grid-row: span 2;
+        }
+    }
+
+    .item2 {
+        background-image: url(../images/parrot2.jpg);
+    }
+
+    .item3 {
+        background-image: url(../images/parrot3.jpg);
+
+        @media screen and (min-width: 851px) {
+            grid-row: span 2;
+        }
+    }
+
+    .item4 {
+        background-image: url(../images/parrot4.jpg);
+    }
+
+    .item5 {
+        background-position: 0 20%;
+        background-image: url(../images/parrot8.jpg);
+    }
+
+
+    .item6 {
+
+        background-image: url(../images/parrot6.png);
+
+        @media screen and (min-width: 851px) {
+            grid-row: span 2;
+        }
+    }
+
+    .item7 {
+        background-position: 0 15%;
+        background-image: url(../images/parrot7.jpg);
+    }
+
+    .item8 {
+        background-image: url(../images/parrot5.jpg);
+
+        @media screen and (min-width: 851px) {
+            grid-column: span 2;
+        }
+    }
+}

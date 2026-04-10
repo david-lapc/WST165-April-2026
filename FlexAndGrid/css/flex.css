@@ -1,0 +1,52 @@
+html {
+    background-color: rgb(86, 153, 255);
+}
+
+.myflexbox {
+    background-color: rgb(13, 78, 177);
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    height: 700px;
+    gap: 20px;
+
+    div {
+        background-size: cover;
+        background-position: center;
+        width: 200px;
+        flex-grow: 1;
+    }
+
+    .item1 {
+        background-image: url(../images/parrot1.jpg);
+    }
+
+    .item2 {
+        background-image: url(../images/parrot2.jpg);
+    }
+
+    .item3 {
+        background-image: url(../images/parrot3.jpg);
+    }
+
+    .item4 {
+        background-image: url(../images/parrot4.jpg);
+    }
+
+    .item5 {
+        background-image: url(../images/parrot5.jpg);
+    }
+
+    .item6 {
+        background-image: url(../images/parrot6.png);
+    }
+
+    .item7 {
+        background-image: url(../images/parrot7.jpg);
+    }
+
+    .item8 {
+        background-image: url(../images/parrot8.jpg);
+    }
+}

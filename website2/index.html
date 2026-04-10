@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phone Comparison</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        h1 {
+            margin: 20px 0;
+        }
+
+        h2 {
+            margin: 10px 0;
+        }
+
+        p {
+            margin: 10px 0;
+        }
+
+        html {
+            font-family: Arial, sans-serif;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        header {
+            background-color: #424b54;
+            color: #fff;
+
+            .upper-header {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 10px 20px;
+            }
+
+            .logo-container {
+                display: inline-block;
+
+                .logo {
+                    background-color: #fff;
+                    border-radius: 20px;
+                    padding: 5px;
+                }
+            }
+
+            h1 {
+                display: inline;
+                margin-left: 15px;
+                font-size: 2.5rem;
+            }
+
+            nav {
+                ul {
+                    list-style-type: none;
+                    display: flex;
+                    justify-content: space-evenly;
+
+                    li {
+                        a {
+                            color: #fff;
+                            padding: 10px 15px;
+                            display: block;
+                        }
+                    }
+                }
+            }
+        }
+
+        main {
+            padding: 20px;
+            max-width: 970px;
+            margin: 0 auto;
+        }
+
+        .content-container {
+            display: flex;
+            align-items: center;
+
+            @media screen and (max-width: 900px) {
+                display: block;
+            }
+
+            h1 {
+                font-size: 3rem;
+                max-width: 700px;
+            }
+
+            h2 {
+                font-size: 1.8rem;
+                max-width: 500px;
+            }
+
+            img {
+                max-width: 50%;
+                padding: 20px;
+            }
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th,
+        td {
+            border: 2px solid #93a8ac;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #93a8ac;
+            color: white;
+        }
+
+        footer {
+            background-color: #424b54;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="upper-header">
+            <div class="logo-container">
+                <img class="logo" src="images/techlogo.svg" alt="Phone Comparison Logo" width="60">
+            </div>
+            <h1>Tech Reviews</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#reviews">Reviews</a></li>
+                <li><a href="#compare">Compare</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="content-container">
+            <div class="text-content">
+                <h1>Compare the latest smartphones based on <span style="display: inline-block;">key features:</span>
+                </h1>
+                <h2>Looking for the perfect phone?</h2>
+                <p>Use the table below to compare the specifications of different phone models and make an informed
+                    decision.
+            </div>
+            <img src="images/guyholdingphone.avif" alt="Phone Comparison Image" width="800px">
+        </div>
+
+
+        </p>
+        <table>
+            <tr>
+                <th>Phone</th>
+                <th>Price</th>
+                <th>Battery Life</th>
+                <th>Camera Quality</th>
+                <th>Storage Capacity</th>
+                <th>Display Size</th>
+                <th>Processor</th>
+                <th>RAM</th>
+            </tr>
+            <tr>
+                <td>Phone A</td>
+                <td>$699</td>
+                <td>24 hours</td>
+                <td>12 MP</td>
+                <td>128 GB</td>
+                <td>6.1 inches</td>
+                <td>Snapdragon 865</td>
+                <td>8 GB</td>
+            </tr>
+            <tr>
+                <td>Phone B</td>
+                <td>$799</td>
+                <td>30 hours</td>
+                <td>16 MP</td>
+                <td>256 GB</td>
+                <td>6.4 inches</td>
+                <td>Snapdragon 865</td>
+                <td>12 GB</td>
+            </tr>
+            <tr>
+                <td>Phone C</td>
+                <td>$899</td>
+                <td>36 hours</td>
+                <td>20 MP</td>
+                <td>512 GB</td>
+                <td>6.7 inches</td>
+                <td>Snapdragon 888</td>
+                <td>16 GB</td>
+            </tr>
+        </table>
+    </main>
+    <footer>
+        <p>&copy; 2024 Phone Comparison. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>

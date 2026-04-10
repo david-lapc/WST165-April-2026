@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Position Property Interactive Demo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f4f4f4;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        .description {
+            max-width: 800px;
+            margin: 0 auto 20px;
+            padding: 10px;
+            background: white;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .demo-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .parent {
+            position: relative;
+            width: 400px;
+            height: 300px;
+            background-color: #e0e0e0;
+            border: 2px solid #333;
+            margin: 20px auto;
+            padding: 10px;
+        }
+
+        .child {
+            width: 100px;
+            height: 100px;
+            background-color: #4CAF50;
+            border: 2px solid #333;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+
+        .controls {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .controls label {
+            margin-right: 10px;
+            font-weight: bold;
+        }
+
+        .controls select {
+            padding: 5px;
+            font-size: 16px;
+        }
+        .controls input {
+            padding: 5px;
+            font-size: 16px;
+            width: 60px;
+        }
+
+        .info {
+            margin-top: 20px;
+            padding: 10px;
+            background: #f9f9f9;
+            border-radius: 5px;
+        }
+
+        .static {
+            position: static;
+        }
+
+        .relative {
+            position: relative;
+        }
+
+        .absolute {
+            position: absolute;
+        }
+
+        .fixed {
+            position: fixed;
+        }
+
+        .sticky {
+            position: sticky;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>CSS Position Property Interactive Demo</h1>
+    <div class="description">
+        <p>This interactive demo helps you understand how the CSS <code>position</code> property affects element layout.
+            Select different position values from the dropdown to see how the green child element behaves within the
+            gray parent container.</p>
+        <ul>
+            <li><strong>static:</strong> Default positioning, follows normal document flow.</li>
+            <li><strong>relative:</strong> Positioned relative to its normal position, can be offset with
+                top/right/bottom/left.</li>
+            <li><strong>absolute:</strong> Positioned relative to the nearest positioned ancestor, removed from normal
+                flow.</li>
+            <li><strong>fixed:</strong> Positioned relative to the viewport, stays in place during scrolling.</li>
+            <li><strong>sticky:</strong> Hybrid of relative and fixed, sticks when scrolling reaches a threshold.</li>
+        </ul>
+    </div>
+
+    <div class="demo-container">
+        <div class="controls">
+            <label for="position-select">Select Position:</label>
+            <select id="position-select">
+                <option value="static">static</option>
+                <option value="relative">relative</option>
+                <option value="absolute">absolute</option>
+                <option value="fixed">fixed</option>
+                <option value="sticky">sticky</option>
+            </select>
+            <label for="top-input">Top:</label>
+            <input type="number" id="top-input" value="20" min="0" max="200" step="5">px
+            <label for="left-input">Left:</label>
+            <input type="number" id="left-input" value="20" min="0" max="300" step="5">px
+        </div>
+
+        <div class="parent">
+            <div class="child static" id="child-element">Child</div>
+            <p>This is some content inside the parent container. Notice how the child element's position affects the
+                layout.</p>
+            <p>More content here to demonstrate flow.</p>
+        </div>
+
+        <div class="info" id="info-panel">
+            <strong>Current Position:</strong> static<br>
+            <strong>Description:</strong> The element is positioned according to the normal flow of the document.
+        </div>
+    </div>
+
+    <script>
+        const select = document.getElementById('position-select');
+        const child = document.getElementById('child-element');
+        const infoPanel = document.getElementById('info-panel');
+        const topInput = document.getElementById('top-input');
+        const leftInput = document.getElementById('left-input');
+
+        const descriptions = {
+            static: 'The element is positioned according to the normal flow of the document. It is not affected by top, right, bottom, or left properties.',
+            relative: 'The element is positioned relative to its normal position. You can offset it with top, right, bottom, or left properties.',
+            absolute: 'The element is positioned relative to its nearest positioned ancestor (or the document body if none). It is removed from the normal document flow.',
+            fixed: 'The element is positioned relative to the viewport. It stays in the same place even when the page is scrolled.',
+            sticky: 'The element is positioned based on the user\'s scroll position. It toggles between relative and fixed positioning.'
+        };
+
+        function updatePosition() {
+            const pos = select.value;
+            child.className = 'child';
+            child.classList.add(pos);
+            const topVal = topInput.value;
+            const leftVal = leftInput.value;
+            child.style.top = topVal + 'px';
+            child.style.left = leftVal + 'px';
+            infoPanel.innerHTML = `<strong>Current Position:</strong> ${pos}<br><strong>Description:</strong> ${descriptions[pos]}<br><strong>Top:</strong> ${topVal}px<br><strong>Left:</strong> ${leftVal}px`;
+        }
+
+        select.addEventListener('change', updatePosition);
+        topInput.addEventListener('input', updatePosition);
+        leftInput.addEventListener('input', updatePosition);
+
+        // Initialize
+        updatePosition();
+    </script>
+</body>
+
+</html>

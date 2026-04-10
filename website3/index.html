@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cats</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <header>
+        <img class="logo" width="70px" src="images/1x/logo.png">
+        <nav id="nav">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Domestic</a></li>
+                <li><a href="#">Wild</a></li>
+            </ul>
+        </nav>
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </header>
+    <main>
+        <div class="hero">
+            <div class="grid-container">
+                <div class="grid-item">
+                    <img src="images/small-cat.webp">
+                    <h2>Domestic Cats</h2>
+                    <button>Explore Domestic Cats</button>
+                </div>
+                <div class="grid-item">
+                    <img src="images/big-cat.webp">
+                    <h2>Wild Cats</h2>
+                    <button>Explore Wild Cats</button>
+                </div>
+            </div>
+        </div>
+        <div class="explore">
+            <h1>
+                Wild world of Wild Cats
+            </h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis dignissimos fugiat eos voluptatem
+                delectus sapiente eaque accusantium ab provident odio quibusdam, quasi modi eum distinctio esse,
+                officiis labore quas? Rem fugiat facilis, incidunt iste minus veniam, est natus totam, et reiciendis
+                temporibus deleniti eos labore magni beatae accusamus quae enim.</p>
+        </div>
+    </main>
+    <footer></footer>
+
+    <script>
+        let hamburger = document.getElementById('hamburger')
+        let nav = document.getElementById('nav')
+
+        hamburger.addEventListener('click', () => {
+            nav.classList.toggle('open')
+            hamburger.classList.toggle('open')
+        })
+    </script>
+</body>
+
+</html>

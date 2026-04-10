@@ -1,0 +1,171 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* dont add padding to the width,
+    so total width is 200px */
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: url(../images/city-bg.avif);
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+a {
+    font-weight: bold;
+    text-decoration: none;
+    color: rgb(3, 45, 65);
+
+    &:visited {
+        color: rgb(12, 14, 100);
+    }
+
+    &:hover {
+        color: rgb(0, 135, 197);
+    }
+}
+
+header {
+    background-color: rgba(83, 83, 83, 0.85);
+    padding: 20px;
+    text-align: center;
+    color: #fff;
+
+    h1 {
+        margin-bottom: 10px;
+    }
+
+    ul {
+        list-style-type: none;
+
+        li {
+            display: inline;
+            margin: 0 15px;
+        }
+    }
+
+    a {
+        color: rgb(205, 240, 255);
+
+        &:visited {
+            color: rgb(215, 215, 255);
+        }
+
+        &:hover {
+            color: rgb(255, 255, 255);
+        }
+    }
+}
+
+main {
+    max-width: 900px;
+    margin: 20px auto;
+    background-color: rgba(255, 255, 255, 0.85);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+
+    img {
+        width: 600px;
+        max-width: 100%;
+        background-color: #e1eaec;
+        padding: 10px;
+        border-radius: 15px;
+        margin: 20px auto;
+        display: block;
+    }
+
+    h1 {
+        margin: 20px auto;
+        text-align: center;
+    }
+
+    p {
+        max-width: 600px;
+        margin: 20px auto;
+        text-align: left;
+        line-height: 1.6;
+    }
+
+    h2 {
+        margin: 20px auto;
+        text-align: center;
+    }
+
+    h3 {
+        margin: 20px auto;
+        text-align: center;
+    }
+}
+
+section {
+    background-color: #e1eaec;
+    padding: 10px 20px 30px;
+    margin: 20px auto;
+    max-width: 600px;
+    border-radius: 15px;
+
+    &.skills-section {
+        ul {
+            list-style: none;
+            max-width: 400px;
+            padding: 0;
+            margin: auto;
+
+            li {
+                padding-left: 10px;
+                font-size: 1.2em;
+                overflow-x: hidden;
+
+                &:before {
+                    float: left;
+                    width: 0;
+                    color: #000000;
+                    font-weight: bold;
+                    white-space: nowrap;
+                    content:
+                        "• • • • • • • • • • • • • • • • • • • • • • • • • • • • •"
+                    ;
+                }
+
+                span {
+                    &:first-child {
+                        padding-right: 5px;
+                        background-color: #e1eaec;
+                    }
+
+                    &:last-child {
+                        float: right;
+                        padding-left: 5px;
+                        background: #e1eaec
+                    }
+                }
+            }
+        }
+    }
+
+    &.links-section {
+        ul {
+            list-style-type: none;
+            text-align: center;
+
+            li {
+                display: inline;
+                padding: 0 10px;
+            }
+        }
+    }
+}
+
+footer {
+    padding: 30px;
+    text-align: center;
+    color: #fff;
+    background-color: #535353;
+}
